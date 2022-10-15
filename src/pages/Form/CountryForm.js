@@ -1,4 +1,4 @@
-import { Button, TextField } from '@mui/material';
+import { Button, Grid, TextField } from '@mui/material';
 import React, { useState } from 'react';
 import { animated, useSpring } from 'react-spring';
 
@@ -12,9 +12,21 @@ function CountryForm() {
 		setFormNo(() => formNo + 1);
 	};
 	return (
-		<div className='page-content' style={{ background: '#EAE4D8' }}>
-			<div className='form-content'>
-				<div style={{ margin: 'auto', maxWidth: '900px' }}>
+		<Grid container className='page-content' style={{ background: '#EAE4D8' }}>
+			<Grid item sm={0} md={0} lg={4} className='form-image'>
+				<h4 className='form-image-title'>Clean and safe energy</h4>
+				<h1 className='form-image-title'>The Solar Energy</h1>
+				<br />
+				<img
+					src='img/form-img-1.jpg'
+					alt='1'
+					width={250}
+					style={{ borderRadius: '16px' }}
+					height={350}
+				/>
+			</Grid>
+			<Grid item xs={12} sm={12} md={9} lg={8} className='form-content'>
+				<div style={{ margin: 'auto' }}>
 					{formNo === 1 && (
 						<>
 							<h4 className='select-country'>Please Select your Country?</h4>
@@ -49,8 +61,8 @@ function CountryForm() {
 				>
 					Next
 				</Button>
-			</div>
-		</div>
+			</Grid>
+		</Grid>
 	);
 }
 

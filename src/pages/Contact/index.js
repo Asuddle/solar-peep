@@ -1,10 +1,13 @@
 import React from 'react';
-
+// style={{ margin: '6rem 0' }}
 function ContactUs() {
 	return (
-		<div class='container-xxl py-5' style={{ margin: '6rem 0' }}>
+		<div
+			class='container-xxl'
+			style={{ marginLeft: 'auto', marginRight: 'auto' }}
+		>
 			<div class='container contact px-lg-0'>
-				<div class='row g-0 mx-lg-0'>
+				<div style={{ textAlign: 'center' }}>
 					<div
 						class='col-lg-6 contact-text py-5 wow fadeIn'
 						data-wow-delay='0.5s'
@@ -12,12 +15,7 @@ function ContactUs() {
 						<div class='p-lg-5 ps-lg-0'>
 							<h6 class='text-primary'>Contact Us</h6>
 							<h1 class='mb-4'>Feel Free To Contact Us</h1>
-							<p class='mb-4'>
-								The contact form is currently inactive. Get a functional and
-								working contact form with Ajax & PHP in a few minutes. Just copy
-								and paste the files, add a little code and you're done.{' '}
-								<a href='https://htmlcodex.com/contact-form'>Download Now</a>.
-							</p>
+
 							<form>
 								<div class='row g-3'>
 									<div class='col-md-6'>
@@ -76,7 +74,10 @@ function ContactUs() {
 							</form>
 						</div>
 					</div>
-					<div class='col-lg-6 pe-lg-0' style={{ minHeight: '400px' }}>
+					{/* <div
+						class='col-lg-12 '
+						style={{ minHeight: '400px', minWidth: '400px' }}
+					>
 						<div class='position-relative h-100'>
 							<iframe
 								class='position-absolute w-100 h-100'
@@ -88,7 +89,7 @@ function ContactUs() {
 								tabindex='0'
 							></iframe>
 						</div>
-					</div>
+					</div> */}
 				</div>
 			</div>
 		</div>

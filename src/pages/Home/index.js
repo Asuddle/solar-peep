@@ -13,11 +13,20 @@ function HomeComponent(props) {
 	return (
 		<>
 			<Carousel />
-			<Stats />
+			<br />
+
+			{/* <Stats /> */}
 			{/* <AboutUs /> */}
-			<Service />
 			<WhyChooseUs />
+
+			<br />
+			<br />
+			<Service />
+			<br />
+			<br />
 			<Projects />
+			<br />
+			<br />
 			<FreeQuote />
 			{/* <Team /> */}
 		</>

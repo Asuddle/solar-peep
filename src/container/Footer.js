@@ -21,7 +21,7 @@ function Footer() {
 									<i className='fa fa-phone-alt me-3'></i>+012 345 67890
 								</p>
 								<p className='mb-2'>
-									<i className='fa fa-envelope me-3'></i>info@example.com
+									<i className='fa fa-envelope me-3'></i>info@greenglobe.com
 								</p>
 							</div>
 							<div className='d-flex pt-2'>
@@ -65,11 +65,8 @@ function Footer() {
 							<a className='btn btn-link' href=''>
 								Terms & Condition
 							</a>
-							<a className='btn btn-link' href=''>
-								Support
-							</a>
 						</div>
-						<div className='col-lg-3 col-md-6' style={{ textAlign: 'left' }}>
+						{/* <div className='col-lg-3 col-md-6' style={{ textAlign: 'left' }}>
 							<h5 className='text-white mb-4'>Project Gallery</h5>
 							<div className='row g-2'>
 								<div className='col-4'>
@@ -115,15 +112,12 @@ function Footer() {
 									/>
 								</div>
 							</div>
-						</div>
-						<div className='col-lg-3 col-md-6' style={{ textAlign: 'left' }}>
+						</div> */}
+						<div className='col-lg-6 col-md-6' style={{ textAlign: 'left' }}>
 							<h5 className='text-white mb-4'>Newsletter</h5>
-							<p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
-							<div
-								className='position-relative mx-auto'
-								style={{ maxWidth: '400px' }}
-							>
+							<div className='position-relative mx-auto'>
 								<input
+									style={{ width: '100%' }}
 									className='form-control border-0 w-100 py-3 ps-4 pe-5'
 									type='text'
 									placeholder='Your email'
