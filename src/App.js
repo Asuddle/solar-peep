@@ -4,6 +4,7 @@ import React, { Suspense, lazy } from 'react';
 import { BrowserRouter as Router, useRoutes } from 'react-router-dom';
 
 import AboutUs from './pages/Home/AboutUs';
+import ConsumptionForm from './pages/Form';
 import ContactUs from './pages/Contact';
 import Footer from './container/Footer';
 import HomeComponent from './pages/Home';
@@ -15,9 +16,7 @@ function App() {
 			{ path: '/', element: <HomeComponent /> },
 			{ path: '/about', element: <AboutUs /> },
 			{ path: '/contact', element: <ContactUs /> },
-			// { path: '/activity-monitor', element: <ActivityMonitorComponent /> },
-			// { path: '/onboarding', element: <OnboardingComponent /> },
-			// { path: '/onboard/:id', element: <OnboardManagement /> },
+			{ path: '/form', element: <ConsumptionForm /> },
 		]);
 	};
 	return (

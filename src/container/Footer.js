@@ -10,17 +10,19 @@ function Footer() {
 				<div className='container py-5'>
 					<div className='row g-5'>
 						<div className='col-lg-3 col-md-6'>
-							<h5 className='text-white mb-4'>Address</h5>
-							<p className='mb-2'>
-								<i className='fa fa-map-marker-alt me-3'></i>123 Street, New
-								York, USA
-							</p>
-							<p className='mb-2'>
-								<i className='fa fa-phone-alt me-3'></i>+012 345 67890
-							</p>
-							<p className='mb-2'>
-								<i className='fa fa-envelope me-3'></i>info@example.com
-							</p>
+							<div style={{ textAlign: 'left' }}>
+								<h5 className='text-white mb-4'>Address</h5>
+								<p className='mb-2'>
+									<i className='fa fa-map-marker-alt me-3'></i>123 Street, New
+									York, USA
+								</p>
+								<p className='mb-2'>
+									<i className='fa fa-phone-alt me-3'></i>+012 345 67890
+								</p>
+								<p className='mb-2'>
+									<i className='fa fa-envelope me-3'></i>info@example.com
+								</p>
+							</div>
 							<div className='d-flex pt-2'>
 								<a
 									className='btn btn-square btn-outline-light btn-social'
@@ -48,7 +50,7 @@ function Footer() {
 								</a>
 							</div>
 						</div>
-						<div className='col-lg-3 col-md-6'>
+						<div className='col-lg-3 col-md-6' style={{ textAlign: 'left' }}>
 							<h5 className='text-white mb-4'>Quick Links</h5>
 							<a className='btn btn-link' href=''>
 								About Us
@@ -66,7 +68,7 @@ function Footer() {
 								Support
 							</a>
 						</div>
-						<div className='col-lg-3 col-md-6'>
+						<div className='col-lg-3 col-md-6' style={{ textAlign: 'left' }}>
 							<h5 className='text-white mb-4'>Project Gallery</h5>
 							<div className='row g-2'>
 								<div className='col-4'>
@@ -113,7 +115,7 @@ function Footer() {
 								</div>
 							</div>
 						</div>
-						<div className='col-lg-3 col-md-6'>
+						<div className='col-lg-3 col-md-6' style={{ textAlign: 'left' }}>
 							<h5 className='text-white mb-4'>Newsletter</h5>
 							<p>Dolor amet sit justo amet elitr clita ipsum elitr est.</p>
 							<div
@@ -139,7 +141,7 @@ function Footer() {
 					<div className='copyright'>
 						<div className='row'>
 							<div className='col-md-6 text-center text-md-start mb-3 mb-md-0'>
-								&copy; <a href='#'>Your Site Name</a>, All Right Reserved.
+								&copy; <a href='#'>Green Globe 2022</a>, All Right Reserved.
 							</div>
 						</div>
 					</div>
