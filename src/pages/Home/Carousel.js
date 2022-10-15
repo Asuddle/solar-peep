@@ -20,7 +20,7 @@ const carouselList = [
 		label: 'Pioneers Of Solar And Renewable Energy',
 		img: 'img/carousel-1.jpg',
 		caption:
-			'Vero elitr justo clita lorem. Ipsum dolor at sed stetsit diam no. Kasd rebum ipsum et diam justo clita et kasd rebum sea elitr.',
+			'According to the World Economic Forum (WEF), installing new solar panels is cheaper than a comparable investment in coal, natural gas or other fossil fuel options.',
 	},
 	{
 		label: 'Pioneers Of Solar And Renewable Energy',
@@ -44,10 +44,10 @@ function CarouselComponent() {
 						style={{ height: '500px', width: '100%' }}
 					>
 						<img
-							class='img-fluid'
+							class='carousel-image img-fluid'
 							src={item.img}
 							alt=''
-							style={{ height: '492px', width: '100%' }}
+							// style={{ height: '492px', width: '100%' }}
 						/>
 						<div>
 							<div class='owl-carousel-inner'>

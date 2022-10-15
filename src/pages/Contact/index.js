@@ -1,7 +1,6 @@
-import PropTypes from 'prop-types';
 import React from 'react';
 
-function ContactUs(props) {
+function ContactUs() {
 	return (
 		<div class='container-xxl py-5' style={{ margin: '6rem 0' }}>
 			<div class='container contact px-lg-0'>

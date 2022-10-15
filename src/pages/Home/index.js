@@ -14,7 +14,7 @@ function HomeComponent(props) {
 		<>
 			<Carousel />
 			<Stats />
-			<AboutUs />
+			{/* <AboutUs /> */}
 			<Service />
 			<WhyChooseUs />
 			<Projects />

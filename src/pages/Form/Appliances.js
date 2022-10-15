@@ -1,7 +1,7 @@
 import { Button, Grid, TextField } from '@mui/material';
 import React, { useState } from 'react';
 
-function Appliances(props) {
+function Appliances() {
 	const [formFields, setFormFields] = useState([
 		{ name: '', voltage: 'I dont know', duration: '', count: 0 },
 	]);

@@ -1,3 +1,4 @@
+import { Button } from '@mui/material';
 import React from 'react';
 
 function Footer() {
@@ -127,12 +128,13 @@ function Footer() {
 									type='text'
 									placeholder='Your email'
 								/>
-								<button
-									type='button'
-									className='btn btn-primary py-2 position-absolute top-0 end-0 mt-2 me-2'
+								<Button
+									variant='contained'
+									color='success'
+									className='py-2 position-absolute top-0 end-0 mt-2 me-2'
 								>
-									SignUp
-								</button>
+									Submit
+								</Button>
 							</div>
 						</div>
 					</div>
