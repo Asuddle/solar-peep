@@ -5,30 +5,26 @@ import { animated, useSpring } from 'react-spring';
 import Appliances from './Appliances';
 import CountrySelect from '../../component/CountrySelect';
 import SwitchComponent from '../../component/Switch';
+import { useNavigate } from 'react-router-dom';
 
 function CountryForm() {
 	const [formNo, setFormNo] = useState(1);
+	const [formFields, setFormFields] = useState([
+		{ name: '', voltage: 'I dont know', duration: '', count: 0 },
+	]);
+	const navigate = useNavigate();
 
 	const handleForm = () => {
 		setFormNo(() => formNo + 1);
 	};
+
+	const navigateHome = () => {
+		navigate('/');
+	};
 	return (
 		<Grid container className='page-content' style={{ background: '#EAE4D8' }}>
-			<Grid item sm={0} md={0} lg={4} className='form-image'>
-				<h4 className='form-image-title'>Clean and safe energy</h4>
-				<h1 className='form-image-title'>The Solar Energy</h1>
-				<br />
-				<img
-					src='img/form-img-1.jpg'
-					alt='1'
-					width={250}
-					style={{ borderRadius: '16px' }}
-					height={350}
-				/>
-			</Grid>
-
-			<Grid item xs={12} sm={12} md={9} lg={8} className='form-content'>
-				<div style={{ margin: 'auto' }}>
+			<Grid item xs={12} sm={12} md={12} lg={12} className='form-content'>
+				<div style={{ margin: 'auto', maxWidth: '750px' }}>
 					{formNo === 1 && (
 						<>
 							<h4 className='select-country'>Please Select your Country?</h4>
@@ -58,24 +54,77 @@ function CountryForm() {
 								time of usage and wattage if possible?
 							</h4>
 							<div style={{ textAlign: 'left' }}>
-								<Appliances handleForm={handleForm} />
+								<Appliances
+									handleForm={handleForm}
+									formFields={formFields}
+									setFormFields={setFormFields}
+								/>
 							</div>
 						</>
 					)}
 					{formNo === 3 && (
 						<>
-							<h4 className='select-country'>
-								The Total Result is as follows :
-							</h4>
+							{' '}
+							<div style={{ textAlign: 'left' }}>
+								<h4 className='select-country'>
+									The Total Result is as follows :
+								</h4>
 
-							<h5>Total Average Energy Consumed : 3440W</h5>
-							<h5 style={{ color: 'green' }}>
-								Total Average Green Energy for same load :2100W
-							</h5>
-							<h5>
-								Total Percentage of saved data :{' '}
-								<span style={{ color: 'green' }}>20%</span>
-							</h5>
+								<h5>Total Average Energy Consumed : 3440W</h5>
+								<h5 style={{ color: 'green' }}>
+									Total Average Green Energy for same load :2100W
+								</h5>
+								<h5>
+									Total Percentage of saved Energy :{' '}
+									<span style={{ color: 'green' }}>20%</span>
+								</h5>
+								<h5>
+									Moving towards the Green Energy can save
+									<span style={{ color: 'green' }}>12.5%</span> carbon emission
+								</h5>
+							</div>
+							<br />
+							<table style={{ width: '100%', color: 'black' }}>
+								<thead>
+									<tr>
+										<td>
+											<strong>Name</strong>
+										</td>
+										<td>
+											<strong>Count</strong>
+										</td>
+										<td>
+											<strong>Duration</strong>
+										</td>
+										<td>
+											<strong>Wattage</strong>
+										</td>
+										<td>
+											<strong>Green Wattage (For same consumption)</strong>{' '}
+										</td>
+									</tr>
+								</thead>
+								<tbody>
+									{formFields.map((item) => (
+										<tr>
+											<td>{item.name}</td>
+											<td>{item.count}</td>
+											<td>{item.duration}</td>
+											<td>12.4W</td>
+											<td>9.4W</td>
+										</tr>
+									))}
+								</tbody>
+							</table>
+							<Button
+								size='large'
+								variant='contained'
+								color='success'
+								className='next-button'
+								onClick={navigateHome}
+							>
+								Next
+							</Button>
 						</>
 					)}
 				</div>

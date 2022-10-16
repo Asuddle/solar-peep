@@ -2,19 +2,20 @@ import React from 'react';
 
 const serviceArr = [
 	{
-		label: 'Solar Panels',
+		label:
+			'Giving Statistics about how much gain you can get from green energy',
 		img: 'img/img-600x400-1.jpg',
 		icon: 'fa fa-wind fa-3x',
 		delay: '0.1s',
 	},
 	{
-		label: 'Wind Turbines',
+		label: 'Consulation',
 		img: 'img/img-600x400-2.jpg',
 		icon: 'fa fa-wind fa-3x',
 		delay: '0.3s',
 	},
 	{
-		label: 'Hydropower Plants',
+		label: 'Getting you connected with Sellers',
 		img: 'img/img-600x400-3.jpg',
 		icon: 'fa fa-lightbulb fa-3x',
 		delay: '0.5s',
@@ -30,9 +31,12 @@ function Service(props) {
 					style={{ maxWidth: '600px' }}
 				>
 					<h6 className='text-primary'>Our Services</h6>
-					<h1 className='mb-4'>
-						We Are Pioneers In The World Of Renewable Energy
-					</h1>
+					<h1 className='mb-4'>Green Energy makes the clean energy</h1>
+					<h5>
+						We want you to think about the environment.About how you can make a
+						difference.and about how you can play your part towards a
+						sustainable environmental friendly growth
+					</h5>
 				</div>
 				<div className='row g-4'>
 					{serviceArr.map((item) => (
@@ -49,8 +53,8 @@ function Service(props) {
 									</div>
 									<h4 className='mb-3'>{item.label}</h4>
 									<p>
-										Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam
-										lorem diam.
+										{/* Stet stet justo dolor sed duo. Ut clita sea sit ipsum diam
+										lorem diam. */}
 									</p>
 									<a className='small fw-medium' href=''>
 										Read More<i className='fa fa-arrow-right ms-2'></i>

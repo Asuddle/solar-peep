@@ -10,19 +10,50 @@ import React, { useEffect, useState } from 'react';
 
 import axios from 'axios';
 
-function Appliances({ handleForm }) {
+const optionData = [
+	{
+		id: 1,
+		name: 'Fluorescent Tube',
+	},
+	{
+		id: 2,
+		name: 'Incandescent Lamp',
+	},
+	{
+		id: 3,
+		name: 'LED Light',
+	},
+	{
+		id: 4,
+		name: 'AC Conventional',
+	},
+	{
+		id: 5,
+		name: 'AC Invertor',
+	},
+	{
+		id: 6,
+		name: 'Fan Conventional',
+	},
+	{
+		id: 7,
+		name: 'Fan BLDC/Invertor',
+	},
+];
+function Appliances({ handleForm, formFields, setFormFields }) {
 	const [option, setOption] = useState([]);
 
 	useEffect(() => {
-		axios.get(`http://34.134.67.207/api/appliances`).then((res) => {
-			console.log(res.data);
-			setOption(res.data);
-		});
+		// axios.get(`http://34.134.67.207/api/appliances`).then((res) => {
+		// 	console.log(res.data);
+		// 	setOption(res.data);
+		// });
+		setOption(optionData);
 	}, []);
 
-	const [formFields, setFormFields] = useState([
-		{ name: '', voltage: 'I dont know', duration: '', count: 0 },
-	]);
+	// const [formFields, setFormFields] = useState([
+	// 	{ name: '', voltage: 'I dont know', duration: '', count: 0 },
+	// ]);
 
 	const handleFormChange = (event, index) => {
 		console.log(event.target.name, event.target.value);
@@ -85,7 +116,7 @@ function Appliances({ handleForm }) {
 									onChange={(event) => handleFormChange(event, index)}
 								>
 									{option.map((item) => (
-										<MenuItem value={item.id}>{item.name}</MenuItem>
+										<MenuItem value={item.name}>{item.name}</MenuItem>
 									))}
 								</Select>
 							</Grid>

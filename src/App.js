@@ -9,6 +9,7 @@ import ContactUs from './pages/Contact';
 import Footer from './container/Footer';
 import HomeComponent from './pages/Home';
 import NavigationComponent from './container/Nav';
+import Service from './pages/Home/Service';
 
 function App() {
 	const RoutesComponent = () => {
@@ -17,6 +18,7 @@ function App() {
 			{ path: '/about', element: <AboutUs /> },
 			{ path: '/contact', element: <ContactUs /> },
 			{ path: '/form', element: <ConsumptionForm /> },
+			{ path: '/service', element: <Service /> },
 		]);
 	};
 	return (

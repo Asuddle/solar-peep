@@ -135,6 +135,9 @@ function Graphs(props) {
 					</Grid>
 				</Grid>
 			</div>
+			<h4>
+				The carbon emission would be reduced to more then 25% on green energy
+			</h4>
 		</div>
 	);
 }

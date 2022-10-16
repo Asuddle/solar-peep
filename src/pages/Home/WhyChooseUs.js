@@ -1,13 +1,13 @@
 import React from 'react';
 const qualityArr = [
-	{ name: 'Quality', label: 'Services', icon: 'fa fa-check text-white' },
-	{ name: 'Expert', label: 'Workers', icon: 'fa fa-user-check text-white' },
+	{ name: 'Accurate', label: 'Data', icon: 'fa fa-check text-white' },
+	{ name: 'Reality', label: 'Check', icon: 'fa fa-user-check text-white' },
 	{
 		name: 'Free',
-		label: 'Consultation',
+		label: 'Service',
 		icon: 'fa fa-drafting-compass text-white',
 	},
-	{ name: 'Customer', label: 'Support', icon: 'fa fa-headphones text-white' },
+	{ name: 'Carbon', label: 'Neutrality', icon: 'fa fa-headphones text-white' },
 ];
 function WhyChooseUs(props) {
 	return (
@@ -20,13 +20,11 @@ function WhyChooseUs(props) {
 				>
 					<div class='p-lg-5 ps-lg-0'>
 						<h6 class='text-primary'>Why Choose Us!</h6>
-						<h1 class='mb-4'>
-							Complete Commercial & Residential Solar Systems
-						</h1>
+						<h1 class='mb-4'>We give Statistics,Reality Check and Services</h1>
 						<p class='mb-4 pb-2'>
-							Tempor erat elitr rebum at clita. Diam dolor diam ipsum sit. Aliqu
-							diam amet diam et eos. Clita erat ipsum et lorem et sit, sed stet
-							lorem sit clita duo justo erat amet
+							We want you to try us and check how much gains you can get after
+							you convert to a Green Energy . We Provide links to best green
+							energy in your area .
 						</p>
 						<div class='row g-4'>
 							{qualityArr.map((item) => (
