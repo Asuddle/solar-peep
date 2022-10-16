@@ -8,6 +8,7 @@ import SwitchComponent from '../../component/Switch';
 
 function CountryForm() {
 	const [formNo, setFormNo] = useState(1);
+
 	const handleForm = () => {
 		setFormNo(() => formNo + 1);
 	};
@@ -25,6 +26,7 @@ function CountryForm() {
 					height={350}
 				/>
 			</Grid>
+
 			<Grid item xs={12} sm={12} md={9} lg={8} className='form-content'>
 				<div style={{ margin: 'auto' }}>
 					{formNo === 1 && (
@@ -38,6 +40,15 @@ function CountryForm() {
 							<div style={{ textAlign: 'left' }}>
 								<SwitchComponent />
 							</div>
+							<Button
+								size='large'
+								variant='contained'
+								color='success'
+								className='next-button'
+								onClick={handleForm}
+							>
+								Next
+							</Button>
 						</>
 					)}
 					{formNo === 2 && (
@@ -47,20 +58,27 @@ function CountryForm() {
 								time of usage and wattage if possible?
 							</h4>
 							<div style={{ textAlign: 'left' }}>
-								<Appliances />
+								<Appliances handleForm={handleForm} />
 							</div>
 						</>
 					)}
+					{formNo === 3 && (
+						<>
+							<h4 className='select-country'>
+								The Total Result is as follows :
+							</h4>
+
+							<h5>Total Average Energy Consumed : 3440W</h5>
+							<h5 style={{ color: 'green' }}>
+								Total Average Green Energy for same load :2100W
+							</h5>
+							<h5>
+								Total Percentage of saved data :{' '}
+								<span style={{ color: 'green' }}>20%</span>
+							</h5>
+						</>
+					)}
 				</div>
-				<Button
-					size='large'
-					variant='contained'
-					color='success'
-					className='next-button'
-					onClick={handleForm}
-				>
-					Next
-				</Button>
 			</Grid>
 		</Grid>
 	);

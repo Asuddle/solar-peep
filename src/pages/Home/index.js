@@ -1,6 +1,7 @@
 import AboutUs from './AboutUs';
 import Carousel from './Carousel';
 import FreeQuote from './FreeQuote';
+import Graphs from './Graphs';
 import Projects from './Projects';
 import React from 'react';
 import Service from './Service';
@@ -14,7 +15,8 @@ function HomeComponent(props) {
 		<>
 			<Carousel />
 			<br />
-
+			<Graphs />
+			<br />
 			{/* <Stats /> */}
 			{/* <AboutUs /> */}
 			<WhyChooseUs />

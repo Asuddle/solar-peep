@@ -1,12 +1,31 @@
-import { Button, Grid, TextField } from '@mui/material';
-import React, { useState } from 'react';
+import {
+	Button,
+	Grid,
+	InputLabel,
+	MenuItem,
+	Select,
+	TextField,
+} from '@mui/material';
+import React, { useEffect, useState } from 'react';
 
-function Appliances() {
+import axios from 'axios';
+
+function Appliances({ handleForm }) {
+	const [option, setOption] = useState([]);
+
+	useEffect(() => {
+		axios.get(`http://34.134.67.207/api/appliances`).then((res) => {
+			console.log(res.data);
+			setOption(res.data);
+		});
+	}, []);
+
 	const [formFields, setFormFields] = useState([
 		{ name: '', voltage: 'I dont know', duration: '', count: 0 },
 	]);
 
 	const handleFormChange = (event, index) => {
+		console.log(event.target.name, event.target.value);
 		let data = [...formFields];
 		data[index][event.target.name] = event.target.value;
 		setFormFields(data);
@@ -14,13 +33,14 @@ function Appliances() {
 
 	const submit = (e) => {
 		e.preventDefault();
+		handleForm();
 		console.log(formFields);
 	};
 
 	const addFields = () => {
 		let object = {
 			name: '',
-			voltage: 'I dont know',
+			wattage: 'I dont know',
 			duration: '',
 			count: 0,
 		};
@@ -53,15 +73,21 @@ function Appliances() {
 								lg={3}
 								style={{ textAlign: 'left' }}
 							>
-								{index === 0 && <h6>Name</h6>}
-								<TextField
-									name='name'
+								{index === 0 && <h6>Appliance</h6>}
+								<Select
 									fullWidth
-									placeholder='Name'
-									size='small'
-									onChange={(event) => handleFormChange(event, index)}
+									labelId='demo-simple-select-label'
+									id='demo-simple-select'
 									value={form.name}
-								/>
+									size='small'
+									name='name'
+									label='Appliance'
+									onChange={(event) => handleFormChange(event, index)}
+								>
+									{option.map((item) => (
+										<MenuItem value={item.id}>{item.name}</MenuItem>
+									))}
+								</Select>
 							</Grid>
 							<Grid
 								item
@@ -71,15 +97,15 @@ function Appliances() {
 								lg={3}
 								style={{ textAlign: 'left' }}
 							>
-								{index === 0 && <h6>Voltage</h6>}
+								{index === 0 && <h6>Wattage</h6>}
 								<TextField
-									name='voltage'
+									name='wattage'
 									fullWidth
 									size='small'
 									defaultValue="I don't know"
-									placeholder='Voltage'
+									placeholder='Wattage'
 									onChange={(event) => handleFormChange(event, index)}
-									value={form.voltage}
+									value={form.wattage}
 								/>
 							</Grid>
 							<Grid
@@ -92,12 +118,12 @@ function Appliances() {
 							>
 								{index === 0 && <h6>Count</h6>}
 								<TextField
-									name='voltage'
+									name='count'
 									fullWidth
 									type='number'
 									size='small'
 									defaultValue="I don't know"
-									placeholder='Voltage'
+									placeholder='Count'
 									onChange={(event) => handleFormChange(event, index)}
 									value={form.count}
 								/>
@@ -143,9 +169,15 @@ function Appliances() {
 				Add More..
 			</Button>
 			<br />
-			{/* <Button variant='contained' onClick={submit}>
-				Submit
-			</Button> */}
+			<Button
+				size='large'
+				variant='contained'
+				color='success'
+				className='next-button'
+				onClick={submit}
+			>
+				Next
+			</Button>
 		</div>
 	);
 }
