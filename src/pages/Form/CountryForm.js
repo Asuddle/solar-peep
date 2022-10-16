@@ -116,6 +116,15 @@ function CountryForm() {
 									))}
 								</tbody>
 							</table>
+							<br />
+							<br />
+							<div style={{ textAlign: 'left', color: 'black' }}>
+								<h6>Some Referral Link to Buy Solar Energy</h6>
+								<p>https://ogwenergyresources.com/residential/?gclid</p>
+								<p>https://www.orbitenergy.us/lp/solar</p>
+								<p>https://greenstreetsolar.com/</p>
+								<p>https://www.gevernova.com/</p>
+							</div>
 							<Button
 								size='large'
 								variant='contained'
