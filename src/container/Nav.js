@@ -3,7 +3,7 @@ import { useNavigate } from 'react-router-dom';
 
 const navOptions = [
 	{ name: '', label: 'Home' },
-	{ name: 'form', label: 'Form' },
+	{ name: 'form', label: 'Calculator' },
 	{ name: 'about', label: 'About' },
 	{ name: 'service', label: 'Service' },
 	{ name: 'contact', label: 'Contact' },

@@ -80,7 +80,7 @@ function CountryForm() {
 								</h5>
 								<h5>
 									Moving towards the Green Energy can save
-									<span style={{ color: 'green' }}>12.5%</span> carbon emission
+									<span style={{ color: 'green' }}> 12.5%</span> carbon emission
 								</h5>
 							</div>
 							<br />

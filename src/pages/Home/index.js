@@ -26,9 +26,9 @@ function HomeComponent(props) {
 			<Service />
 			<br />
 			<br />
-			<Projects />
+			{/* <Projects />
 			<br />
-			<br />
+			<br /> */}
 			<FreeQuote />
 			{/* <Team /> */}
 		</>
